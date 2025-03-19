@@ -3,7 +3,7 @@ version: "3"
 services:
   linkstack:
     hostname: "linkstack"
-    image: "docker.io/library/linkstack:latest"
+    image: "ghcr.io/hashim-k/linkstack:main"
     environment:
       TZ: ${TZ}
       SERVER_ADMIN: ${SERVER_ADMIN}
