@@ -38,6 +38,10 @@ RUN apk --no-cache --update \
     tzdata \
     && mkdir /htdocs
 
+RUN mkdir -p /htdocs && \
+    chown -R apache:apache /htdocs && \
+    chmod 755 /htdocs
+
 COPY linkstack /htdocs
 COPY configs/apache2/httpd.conf /etc/apache2/httpd.conf
 COPY configs/apache2/ssl.conf /etc/apache2/conf.d/ssl.conf
